@@ -4,6 +4,17 @@
 	<groupId>com.crusnikeratelier.oauth2</groupId>
 	<artifactId>com.crusnikeratelier.oauth2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<name></name>
+	
+	<dependencies>
+		<dependency>
+		    <groupId>org.glassfish.jersey.core</groupId>
+		    <artifactId>jersey-server</artifactId>
+		    <version>2.25.1</version>
+		</dependency>
+	</dependencies>
+	
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
