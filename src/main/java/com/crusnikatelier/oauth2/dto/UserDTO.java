@@ -13,7 +13,10 @@ public class UserDTO {
 	String username;
 	Date joined;
 	
-	public UserDTO() { }
+	public UserDTO() { 
+		setUsername(null);
+		setJoined(null);
+	}
 	
 	public UserDTO(User user){
 		this();
@@ -21,7 +24,7 @@ public class UserDTO {
 		setJoined(user.getJoined());
 	}
 	
-	@XmlElement(name="username", nillable=true)
+	@XmlElement(name="username")
 	public String getUsername() {
 		return username;
 	}
@@ -30,7 +33,7 @@ public class UserDTO {
 		this.username = username;
 	}
 	
-	@XmlElement(name="joined", nillable=true)
+	@XmlElement(name="joined")
 	public Date getJoined() {
 		return joined;
 	}
