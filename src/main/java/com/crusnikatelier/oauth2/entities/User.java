@@ -6,7 +6,7 @@ public class User {
 	int id;
 	String email;
 	String salt;
-	String password;
+	String hash;
 	Date joined;
 	
 	public int getId() {
@@ -27,16 +27,16 @@ public class User {
 	public void setSalt(String salt) {
 		this.salt = salt;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
 	public Date getJoined() {
 		return joined;
 	}
 	public void setJoined(Date joined) {
 		this.joined = joined;
+	}
+	public String getHash() {
+		return hash;
+	}
+	public void setHash(String hash) {
+		this.hash = hash;
 	}
 }
