@@ -10,10 +10,7 @@ import com.crusnikatelier.oauth2.entities.User;
 @XmlRootElement(name="user")
 public class UserDTO {
 	
-	@XmlElement(name="username")
 	String username;
-	
-	@XmlElement(name="joined")
 	Date joined;
 	
 	public UserDTO() { }
@@ -23,7 +20,8 @@ public class UserDTO {
 		setUsername(user.getEmail());
 		setJoined(user.getJoined());
 	}
-
+	
+	@XmlElement(name="username", nillable=true)
 	public String getUsername() {
 		return username;
 	}
@@ -31,7 +29,8 @@ public class UserDTO {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
+	
+	@XmlElement(name="joined", nillable=true)
 	public Date getJoined() {
 		return joined;
 	}
