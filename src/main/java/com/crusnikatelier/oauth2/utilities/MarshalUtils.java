@@ -43,7 +43,7 @@ public final class MarshalUtils {
 	 * @return
 	 * @throws JAXBException if Object cannot be deserialized
 	 */
-	public static <T> T Unmarshal(String xml, Class<T> clazz) throws JAXBException{
+	public static <T> T unmarshal(String xml, Class<T> clazz) throws JAXBException{
 		try{
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
