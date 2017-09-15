@@ -12,7 +12,6 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
 	<servlet>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
@@ -22,11 +21,13 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
+	<servlet>
+		<servlet-name>initializationServlet</servlet-name>
+		<servlet-class>com.crusnikatelier.oauth2.servlets.InitializationServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-
-
 </web-app>
