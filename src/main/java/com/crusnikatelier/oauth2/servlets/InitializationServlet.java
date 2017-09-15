@@ -8,18 +8,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Servlet implementation class InitializationServlet
  */
 @WebServlet("/InitializationServlet")
 public class InitializationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final Logger logger = LogManager.getLogger(InitializationServlet.class);
+	
     /**
      * Default constructor. 
      */
     public InitializationServlet() {
-        // TODO Auto-generated constructor stub
+    	logger.trace("Started initialization Servlet");
     }
 
 	/**
