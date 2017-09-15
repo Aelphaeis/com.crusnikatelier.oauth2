@@ -1,4 +1,4 @@
-package com.crusnikeratelier.oauth2.rest;
+package com.crusnikatelier.oauth2.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
