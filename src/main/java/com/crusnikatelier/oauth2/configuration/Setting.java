@@ -5,7 +5,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 public enum Setting {
-	DATASOURCE("jdbc/mysql/datasource");
+	DATASOURCE("java:comp/env/jdbc/datasource");
 	
 	public static Object value(Setting setting){
 		try{
