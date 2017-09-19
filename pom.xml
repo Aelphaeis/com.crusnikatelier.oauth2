@@ -65,6 +65,12 @@
 			<artifactId>liquibase-core</artifactId>
 			<version>3.5.3</version>
 		</dependency>
+		
+		<dependency>
+	        <groupId>org.bouncycastle</groupId>
+	        <artifactId>bcpkix-jdk15on</artifactId>
+	        <version>1.56</version>
+	    </dependency>
 		<!-- J-unit 4.12 -->
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>

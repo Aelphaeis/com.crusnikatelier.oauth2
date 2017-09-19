@@ -2,12 +2,29 @@ package com.crusnikatelier.oauth2.entities;
 
 import java.util.Date;
 
+/**
+ * 
+ * @author joseph.morain
+ *
+ */
 public class User {
+	//number integer
 	int id;
+	
+	//String 254 legnth
 	String email;
+	
+	//
 	String salt;
+	
+	//128 characters SHA3-512
 	String hash;
+	
+	//Just a date in UTC
 	Date joined;
+	
+	//36 Characters
+	String guid;
 	
 	public int getId() {
 		return id;
