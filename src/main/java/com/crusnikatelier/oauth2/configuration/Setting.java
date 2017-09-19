@@ -19,9 +19,9 @@ public enum Setting {
 		}
 	}
 	
-	String name;
+	private String name;
 	
-	Setting(String name){
+	private Setting(String name){
 		setName(name);
 	}
 	
@@ -29,7 +29,7 @@ public enum Setting {
 		return name;
 	}
 
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
 	
