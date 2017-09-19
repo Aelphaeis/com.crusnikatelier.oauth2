@@ -1,5 +1,5 @@
 /**
- * This package is used for classes that will be used in the start up in the configuration of the application.
+ * This package is used for helping to configure the application.
  */
 /**
  * @author Joseph Morain
