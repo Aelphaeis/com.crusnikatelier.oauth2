@@ -59,6 +59,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.44</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.liquibase/liquibase-core -->
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>3.5.3</version>
+		</dependency>
 		<!-- J-unit 4.12 -->
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
