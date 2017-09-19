@@ -33,7 +33,7 @@ public enum Setting {
 		this.name = name;
 	}
 	
-	public Object getValue(String name){
+	public Object getValue(){
 		return value(this);
 	}
 }
