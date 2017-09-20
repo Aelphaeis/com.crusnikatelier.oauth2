@@ -5,7 +5,7 @@ import java.nio.ByteOrder;
 import java.security.SecureRandom;
 
 public class Randomizer {
-	private final static String chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	public final static String alphanumerics = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	SecureRandom generator;
 	
 	public Randomizer(){
@@ -47,9 +47,13 @@ public class Randomizer {
 	}
 	
 	public String getAlphanumeric(int characterCount){
+		return getRandomCharacterSubset(alphanumerics, characterCount);
+	}
+	
+	public String getRandomCharacterSubset(String original, int characterCount) {
 		String s = "";
 		for(int i = 0; i < characterCount; i++){
-			s += chars.charAt(generator.nextInt(chars.length()));
+			s += original.charAt(generator.nextInt(original.length()));
 		}
 		return s;
 	}
