@@ -5,15 +5,15 @@
 	<artifactId>com.crusnikeratelier.oauth2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
+
 	<name>OAuth Server</name>
 
 	<properties>
 		<jersey2.version>2.19</jersey2.version>
 		<jaxrs.version>2.0.1</jaxrs.version>
-    	<failOnMissingWebXml>false</failOnMissingWebXml>  
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
-	
+
 	<dependencies>
 		<!-- logging Libs -->
 		<dependency>
@@ -67,12 +67,13 @@
 			<artifactId>liquibase-core</artifactId>
 			<version>3.5.3</version>
 		</dependency>
-		
+
+		<!--  For user passwords -->
 		<dependency>
-	        <groupId>org.bouncycastle</groupId>
-	        <artifactId>bcpkix-jdk15on</artifactId>
-	        <version>1.56</version>
-	    </dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcpkix-jdk15on</artifactId>
+			<version>1.56</version>
+		</dependency>
 		<!-- J-unit 4.12 -->
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
