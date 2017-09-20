@@ -1,4 +1,4 @@
-package com.crusnikatelier.oauth2.entities;
+package com.crusnikatelier.oauth2.data.entities;
 
 import java.util.Date;
 
