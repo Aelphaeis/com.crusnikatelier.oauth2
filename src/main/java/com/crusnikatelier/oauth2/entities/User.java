@@ -2,28 +2,36 @@ package com.crusnikatelier.oauth2.entities;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * 
- * @author joseph.morain
+ * @author Joseph Morain
  *
  */
+@Entity
+@Table(name="users")
 public class User {
-	//number integer
+	
+	@Id
 	int id;
 	
-	//String 254 legnth
+	@Column(name="email", length=254, nullable=false, unique=true)
 	String email;
 	
-	//
+	@Column(name="salt", length=32, nullable=false, unique=false)
 	String salt;
 	
-	//128 characters SHA3-512
+	@Column(name="hash", length=60, nullable=false, unique=false)
 	String hash;
 	
-	//Just a date in UTC
+	@Column(name="joined", nullable=false)
 	Date joined;
 	
-	//36 Characters
+	@Column(name="guid", length=36, nullable=false, unique=true)
 	String guid;
 	
 	public int getId() {
