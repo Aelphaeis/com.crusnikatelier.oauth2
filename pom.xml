@@ -5,13 +5,15 @@
 	<artifactId>com.crusnikeratelier.oauth2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
-	<name></name>
+	
+	<name>OAuth Server</name>
 
 	<properties>
 		<jersey2.version>2.19</jersey2.version>
 		<jaxrs.version>2.0.1</jaxrs.version>
+    	<failOnMissingWebXml>false</failOnMissingWebXml>  
 	</properties>
+	
 	<dependencies>
 		<!-- logging Libs -->
 		<dependency>
