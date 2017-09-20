@@ -4,11 +4,11 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.security.SecureRandom;
 
-public class RandomUtils {
+public class Randomizer {
 	private final static String chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	SecureRandom generator;
 	
-	public RandomUtils(){
+	public Randomizer(){
 		generator = new SecureRandom();
 	}
 	
