@@ -4,6 +4,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+import com.crusnikatelier.oauth2.services.HibernateDataService;
+
 /**
  * Application Lifecycle Listener implementation class HibernateListener
  *
@@ -11,25 +13,20 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 public class HibernateListener implements ServletContextListener {
 
-    /**
-     * Default constructor. 
-     */
-    public HibernateListener() {
-        // TODO Auto-generated constructor stub
-    }
-
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
-         // TODO Auto-generated method stub
+    	//Initialize Hibernate here.
+    	HibernateDataService.getInstance();
     }
     
 	/**
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
-    public void contextDestroyed(ServletContextEvent sce)  { 
-         // TODO Auto-generated method stub
+    public void contextDestroyed(ServletContextEvent sce)  {
+    	//Cleanup Hibernate here
+    	HibernateDataService.getInstance().close();
     }
 	
 }

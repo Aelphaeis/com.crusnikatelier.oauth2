@@ -20,6 +20,9 @@
   <listener>
     <listener-class>com.crusnikatelier.oauth2.listener.LiquibaseListener</listener-class>
   </listener>
+  <listener>
+  	<listener-class>com.crusnikatelier.oauth2.listener.HibernateListener</listener-class>
+  </listener>
   <servlet>
     <servlet-name>jersey-serlvet</servlet-name>
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
