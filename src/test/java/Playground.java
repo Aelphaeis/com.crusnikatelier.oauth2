@@ -1,20 +1,13 @@
-import static org.junit.Assert.*;
-
 import java.math.BigInteger;
 import java.util.UUID;
 
-import org.bouncycastle.crypto.Digest;
-import org.bouncycastle.crypto.generators.BCrypt;
 import org.bouncycastle.crypto.generators.OpenBSDBCrypt;
-import org.bouncycastle.jcajce.provider.digest.SHA3;
-import org.bouncycastle.jcajce.provider.digest.SHA3.Digest512;
-import org.bouncycastle.util.encoders.Hex;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.crusnikatelier.oauth2.services.UserService;
 import com.crusnikatelier.oauth2.utilities.Randomizer;
+import com.crusnikatelier.oauth2.utilities.Users;
 
 public class Playground {
 
@@ -42,9 +35,9 @@ public class Playground {
 		String password = "Hello World";
 		Randomizer r = new Randomizer();
 
-		String salt = UserService.generateUserSalt();
+		String salt = Users.generateUserSalt();
 		System.out.println(salt);
-		byte[] bArr = UserService.hexToByteArray(salt);
+		byte[] bArr = Users.hexToByteArray(salt);
 		BigInteger buffer = new BigInteger(1, bArr);
 		System.out.println(buffer.toString(16));
 		
