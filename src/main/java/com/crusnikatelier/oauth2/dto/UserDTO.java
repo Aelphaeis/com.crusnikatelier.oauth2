@@ -11,6 +11,7 @@ import com.crusnikatelier.oauth2.data.entities.User;
 public class UserDTO {
 	
 	String username;
+	String guid;
 	Date joined;
 	
 	public UserDTO() { 
