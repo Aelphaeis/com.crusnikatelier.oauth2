@@ -8,9 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 
  * @author Joseph Morain
- *
  */
 @Entity
 @Table(name="users")

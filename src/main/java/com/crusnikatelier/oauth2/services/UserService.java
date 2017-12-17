@@ -34,7 +34,7 @@ public class UserService {
 	}
 	
 	/**
-	 * Generates a  universally unique identifier 36 characters long
+	 * Generates a universally unique identifier 36 characters long
 	 * @return
 	 */
 	public static String generateUserGuid() {
