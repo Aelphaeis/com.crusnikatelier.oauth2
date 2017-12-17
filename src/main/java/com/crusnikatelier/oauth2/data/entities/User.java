@@ -7,12 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.crusnikatelier.oauth2.data.DataEntity;
+
 /**
  * @author Joseph Morain
  */
 @Entity
 @Table(name="users")
-public class User {
+public class User implements DataEntity {
 	
 	@Id
 	int id;
@@ -61,5 +63,11 @@ public class User {
 	}
 	public void setHash(String hash) {
 		this.hash = hash;
+	}
+	public String getGuid() {
+		return guid;
+	}
+	public void setGuid(String guid) {
+		this.guid = guid;
 	}
 }
