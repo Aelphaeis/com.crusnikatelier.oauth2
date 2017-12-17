@@ -1,13 +1,11 @@
-package com.crusnikatelier.oauth2.services;
+package com.crusnikatelier.oauth2.utilities;
 
 import java.math.BigInteger;
 import java.util.UUID;
 
 import org.bouncycastle.crypto.generators.OpenBSDBCrypt;
 
-import com.crusnikatelier.oauth2.utilities.Randomizer;
-
-public class UserService {
+public class Users {
 	
 	public static final int HASH_COST = 13;
 	public static final String SALT_CHARACTER_SET = Randomizer.alphanumerics + "./";
@@ -56,5 +54,5 @@ public class UserService {
 		return OpenBSDBCrypt.generate(pwdCharArr, saltBytes, HASH_COST);
 	}
 	
-	private UserService() { }
+	private Users() { }
 }
