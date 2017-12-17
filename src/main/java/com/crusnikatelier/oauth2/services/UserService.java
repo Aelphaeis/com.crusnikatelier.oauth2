@@ -55,4 +55,6 @@ public class UserService {
 		char[] pwdCharArr = password.toCharArray();
 		return OpenBSDBCrypt.generate(pwdCharArr, saltBytes, HASH_COST);
 	}
+	
+	private UserService() { }
 }
