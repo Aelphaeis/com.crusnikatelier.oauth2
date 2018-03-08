@@ -2,7 +2,6 @@ package com.crusnikatelier.oauth2.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
 
 import com.crusnikatelier.oauth2.services.HibernateDataService;
 
@@ -15,6 +14,7 @@ public class HibernateListener implements ServletContextListener {
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
+	@Override
     public void contextInitialized(ServletContextEvent sce)  { 
     	//Initialize Hibernate here.
     	HibernateDataService.getInstance();
@@ -23,6 +23,7 @@ public class HibernateListener implements ServletContextListener {
 	/**
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
+	@Override
     public void contextDestroyed(ServletContextEvent sce)  {
     	//Cleanup Hibernate here
     	HibernateDataService.getInstance().close();
