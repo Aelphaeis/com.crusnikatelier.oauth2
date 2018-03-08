@@ -10,9 +10,9 @@
 		testWhileIdle="true" 
 		timeBetweenEvictionRunsMillis="30000" 
 		validationQuery="SELECT 1" 
-		username="oauth2" 
-		password="123456" 
-		url="jdbc:mysql://localhost:3306/liquibase" 
+		username="<username>" 
+		password="<password>" 
+		url="<url>" 
 		testOnBorrow="true" 
 		validationInterval="30000" 
 	/>
