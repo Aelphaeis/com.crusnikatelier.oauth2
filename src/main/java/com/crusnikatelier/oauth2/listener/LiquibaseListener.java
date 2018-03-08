@@ -10,7 +10,6 @@ import liquibase.integration.servlet.LiquibaseServletListener;
  * Application Lifecycle Listener implementation class LiquibaseListener
  *
  */
-@WebListener
 public class LiquibaseListener extends LiquibaseServletListener implements ServletContextListener {
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)

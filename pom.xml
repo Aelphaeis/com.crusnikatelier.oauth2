@@ -11,7 +11,7 @@
 	<properties>
 		<jersey2.version>2.19</jersey2.version>
 		<jaxrs.version>2.0.1</jaxrs.version>
-		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<failOnMissingWebXml>true</failOnMissingWebXml>
 	</properties>
 
 	<dependencies>
@@ -108,6 +108,21 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>WebContent</directory>
+						</resource>
+					</webResources>
+					<webXml>WebContent/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 </project>

@@ -10,7 +10,6 @@ import com.crusnikatelier.oauth2.services.HibernateDataService;
  * Application Lifecycle Listener implementation class HibernateListener
  *
  */
-@WebListener
 public class HibernateListener implements ServletContextListener {
 
 	/**
