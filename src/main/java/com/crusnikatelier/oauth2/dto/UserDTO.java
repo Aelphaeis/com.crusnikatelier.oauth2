@@ -17,6 +17,7 @@ public class UserDTO {
 	public UserDTO() { 
 		setUsername(null);
 		setJoined(null);
+		setGuid(null);
 	}
 	
 	public UserDTO(User user){
@@ -41,5 +42,14 @@ public class UserDTO {
 
 	public void setJoined(Date joined) {
 		this.joined = joined;
+	}
+	
+	@XmlElement(name="guid")
+	public String getGuid() {
+		return guid;
+	}
+
+	public void setGuid(String guid) {
+		this.guid = guid;
 	}
 }
