@@ -41,7 +41,7 @@ public final class MarshalUtils {
 	 * @param xml string to deserialize
 	 * @param clazzs class we will deserialize to
 	 * @return
-	 * @throws JAXBException if Object cannot be deserialized
+	 * @throws JAXBException if Object cannot be deserialized	
 	 */
 	public static <T> T unmarshal(String xml, Class<T> clazz) throws JAXBException{
 		try{
