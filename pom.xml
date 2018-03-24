@@ -11,7 +11,7 @@
 	<properties>
 		<jersey2.version>2.19</jersey2.version>
 		<jaxrs.version>2.0.1</jaxrs.version>
-		<failOnMissingWebXml>true</failOnMissingWebXml>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
 
 	<dependencies>
@@ -41,6 +41,11 @@
 			<version>${jaxrs.version}</version>
 		</dependency>
 		<!-- Jersey 2.19 -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
@@ -120,6 +125,7 @@
 						</resource>
 					</webResources>
 					<webXml>WebContent/WEB-INF/web.xml</webXml>
+<!-- 					<webXml>WebContent/WEB-INF/web.xml</webXml> -->
 				</configuration>
 			</plugin>
 		</plugins>
