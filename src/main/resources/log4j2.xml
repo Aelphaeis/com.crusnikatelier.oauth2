@@ -8,6 +8,7 @@
 	</Appenders>
 	<Loggers>
 		<Logger name="org.hibernate" level="INFO" />
+		<Logger name="org.springframework" level="INFO" />
 		<Root level="trace">
 			<AppenderRef ref="console" />
 		</Root>
