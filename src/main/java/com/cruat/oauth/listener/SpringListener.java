@@ -12,12 +12,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Application Lifecycle Listener implementation class SpringStartupListener
+ * Application Lifecycle Listener implementation class SpringListener
  *
  */
 @WebListener
-public class SpringStartupListener implements ServletContextListener {
-	private static final Logger logger = LogManager.getLogger(SpringStartupListener.class);
+public class SpringListener implements ServletContextListener {
+	private static final Logger logger = LogManager.getLogger(SpringListener.class);
 	private static final String LOCATION = "context.xml";
 	ConfigurableApplicationContext ctxt;
 
