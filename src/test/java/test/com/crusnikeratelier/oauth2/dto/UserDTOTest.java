@@ -9,8 +9,8 @@ import javax.xml.bind.JAXBException;
 
 import org.junit.Test;
 
-import com.crusnikatelier.oauth2.dto.UserDTO;
-import com.crusnikatelier.oauth2.utilities.MarshalUtils;
+import com.cruat.oauth.dto.UserDTO;
+import com.cruat.oauth.utilities.MarshalUtils;
 
 public class UserDTOTest {
 
