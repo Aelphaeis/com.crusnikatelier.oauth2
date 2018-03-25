@@ -9,7 +9,6 @@ import javax.servlet.annotation.WebListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -26,7 +25,6 @@ public class SpringStartupListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
-    	
     	ctxt = new ClassPathXmlApplicationContext(LOCATION);
     	for(String name : ctxt.getBeanDefinitionNames()) {
     		logger.info(name);
