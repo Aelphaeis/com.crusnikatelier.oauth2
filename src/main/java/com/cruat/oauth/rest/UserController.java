@@ -14,14 +14,14 @@ import com.cruat.oauth.services.UserService;
 import com.cruat.oauth.utilities.Users;
 
 @RestController
-public class UserResource {
+public class UserController {
 
 	HttpServletRequest request;
 
 	UserService userService;
 
 	@Autowired
-	public UserResource(UserService uService) {
+	public UserController(UserService uService) {
 		setUserService(uService);
 	}
 	public void createUser(CreateUserForm form) {

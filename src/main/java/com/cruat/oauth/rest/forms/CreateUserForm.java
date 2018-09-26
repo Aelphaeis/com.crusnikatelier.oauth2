@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.cruat.oauth.exceptions.AggregationException;
-import com.cruat.oauth.rest.UserResource;
+import com.cruat.oauth.rest.UserController;
 
 /**
  * This class represents the information necessary to create a user.
  * 
- * @see UserResource#createUser
+ * @see UserController#createUser
  * @author Aelphaeis
  */
 @XmlRootElement
