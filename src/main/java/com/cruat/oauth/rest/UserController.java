@@ -24,6 +24,7 @@ public class UserController {
 	public UserController(UserService uService) {
 		setUserService(uService);
 	}
+
 	public void createUser(CreateUserForm form) {
 		String email = form.getEmail();
 		String pass = form.getPassword();
@@ -31,6 +32,7 @@ public class UserController {
 	}
 
 	public void modifyUser() {
+		//TODO implement me
 	}
 
 	@GetMapping("me")
