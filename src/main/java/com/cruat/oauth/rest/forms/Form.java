@@ -5,9 +5,12 @@ import com.cruat.oauth.exceptions.AggregationException;
 public interface Form {
 
 	/**
-	 * Validates the arguments of this object. If any problems occur, an {@Link AggregationException} is thrown with a 
-	 * collection of {@link ValidationException}
-	 * @throws AggregationException If a validation exception occures
+	 * Validates the arguments of this object. If any problems occur, an
+	 * {@Link AggregationException} is thrown with a collection of
+	 * {@link ValidationException}
+	 * 
+	 * @throws AggregationException
+	 *             If a validation exception occures
 	 */
 	void validate() throws AggregationException;
 

@@ -12,21 +12,21 @@ import com.cruat.oauth.services.HibernateDataService;
 public class HibernateListener implements ServletContextListener {
 
 	/**
-     * @see ServletContextListener#contextInitialized(ServletContextEvent)
-     */
+	 * @see ServletContextListener#contextInitialized(ServletContextEvent)
+	 */
 	@Override
-    public void contextInitialized(ServletContextEvent sce)  { 
-    	//Initialize Hibernate here.
-    	HibernateDataService.getInstance();
-    }
-    
+	public void contextInitialized(ServletContextEvent sce) {
+		// Initialize Hibernate here.
+		HibernateDataService.getInstance();
+	}
+
 	/**
-     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-     */
+	 * @see ServletContextListener#contextDestroyed(ServletContextEvent)
+	 */
 	@Override
-    public void contextDestroyed(ServletContextEvent sce)  {
-    	//Cleanup Hibernate here
-    	HibernateDataService.getInstance().close();
-    }
-	
+	public void contextDestroyed(ServletContextEvent sce) {
+		// Cleanup Hibernate here
+		HibernateDataService.getInstance().close();
+	}
+
 }
