@@ -1,4 +1,4 @@
-package com.cruat.oauth.data;
+package com.cruat.oauth.common.data;
 
 public interface DataAccessObject<T extends DataEntity> {
 	public T create(T obj);

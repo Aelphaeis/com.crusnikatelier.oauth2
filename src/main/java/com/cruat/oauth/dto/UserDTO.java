@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.cruat.oauth.data.entities.User;
+import com.cruat.oauth.common.data.entities.User;
 
 @XmlRootElement(name="user")
 public class UserDTO {

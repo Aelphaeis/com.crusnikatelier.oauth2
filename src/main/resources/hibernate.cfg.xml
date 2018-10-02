@@ -3,6 +3,6 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.datasource">java:comp/env/jdbc/datasource</property>
-		<mapping class="com.cruat.oauth.data.entities.User"/>
+		<mapping class="com.cruat.oauth.common.data.entities.User"/>
 	</session-factory>
 </hibernate-configuration>

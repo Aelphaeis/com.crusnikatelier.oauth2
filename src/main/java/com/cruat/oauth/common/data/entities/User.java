@@ -1,4 +1,4 @@
-package com.cruat.oauth.data.entities;
+package com.cruat.oauth.common.data.entities;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.cruat.oauth.data.DataEntity;
+import com.cruat.oauth.common.data.DataEntity;
 
 /**
  * @author Joseph Morain

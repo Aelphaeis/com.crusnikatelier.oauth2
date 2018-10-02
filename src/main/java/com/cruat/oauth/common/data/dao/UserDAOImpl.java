@@ -1,9 +1,8 @@
-package com.cruat.oauth.data.dao.impl;
+package com.cruat.oauth.common.data.dao;
 
 import org.springframework.stereotype.Component;
 
-import com.cruat.oauth.data.dao.UserDAO;
-import com.cruat.oauth.data.entities.User;
+import com.cruat.oauth.common.data.entities.User;
 
 @Component
 public class UserDAOImpl implements UserDAO {
