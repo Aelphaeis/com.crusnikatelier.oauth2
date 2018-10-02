@@ -1,23 +1,28 @@
 package com.cruat.oauth.feature.users;
 
 import org.hibernate.Session;
-import org.springframework.stereotype.Component;
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
 
 import com.cruat.oauth.common.data.DataAccessObject;
 import com.cruat.oauth.common.data.entities.User;
 
-@Component
+@Repository
 public class UserDAO implements DataAccessObject<User> {
+	
+	private SessionFactory factory;
+	
+	public UserDAO(SessionFactory factory) {
+		this.factory = factory;
+	}
 
 	@Override
 	public Session getSession() {
-		// TODO Auto-generated method stub
-		return null;
+		return factory.getCurrentSession();
 	}
 
 	@Override
 	public Class<User> getEntityClass() {
-		// TODO Auto-generated method stub
-		return null;
+		return User.class;
 	}
 }
