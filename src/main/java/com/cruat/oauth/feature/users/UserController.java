@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cruat.oauth.common.data.entities.User;
 
-@RestController("users")
+@RestController
 public class UserController {
 
 	private UserService userService;
@@ -16,7 +16,7 @@ public class UserController {
 		setUserService(uService);
 	}
 
-	@PostMapping
+	@PostMapping(path="users")
 	public UserDTO createUser(CreateUserForm form) {
 		String email = form.getEmail();
 		String pass = form.getPassword();
