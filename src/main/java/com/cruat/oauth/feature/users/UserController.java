@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController("users")
 public class UserController {
 
 	HttpServletRequest request;
@@ -20,7 +20,7 @@ public class UserController {
 		setUserService(uService);
 	}
 
-	@PostMapping("")
+	@PostMapping
 	public void createUser(CreateUserForm form) {
 		String email = form.getEmail();
 		String pass = form.getPassword();
