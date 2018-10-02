@@ -17,7 +17,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 @WebListener
 public class SpringListener implements ServletContextListener {
-	private static final Logger logger = LogManager.getLogger(SpringListener.class);
+	private static final Logger logger = LogManager.getLogger();
 	private static final String LOCATION = "context.xml";
 	ConfigurableApplicationContext ctxt;
 

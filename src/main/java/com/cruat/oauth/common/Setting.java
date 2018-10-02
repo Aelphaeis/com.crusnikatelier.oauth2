@@ -15,7 +15,8 @@ public enum Setting {
 		}
 		catch(NamingException e){
 			String err = "Unable to access Setting \"%s\"";
-			throw new IllegalStateException(String.format(err, setting.getName()));
+			err = String.format(err, setting.getName());
+			throw new IllegalStateException(err);
 		}
 	}
 	

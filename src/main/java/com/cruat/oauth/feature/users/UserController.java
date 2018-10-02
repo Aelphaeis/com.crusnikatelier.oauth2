@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,7 @@ public class UserController {
 		setUserService(uService);
 	}
 
+	@PostMapping("")
 	public void createUser(CreateUserForm form) {
 		String email = form.getEmail();
 		String pass = form.getPassword();
