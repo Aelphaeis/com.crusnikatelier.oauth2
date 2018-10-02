@@ -1,4 +1,4 @@
-package com.cruat.oauth.rest;
+package com.cruat.oauth.feature.users;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -6,9 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.cruat.oauth.rest.forms.CreateUserForm;
-import com.cruat.oauth.services.UserService;
 
 @RestController
 public class UserController {

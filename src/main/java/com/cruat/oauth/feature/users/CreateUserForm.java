@@ -1,4 +1,4 @@
-package com.cruat.oauth.rest.forms;
+package com.cruat.oauth.feature.users;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.cruat.oauth.exceptions.AggregationException;
-import com.cruat.oauth.rest.UserController;
+import com.cruat.oauth.rest.forms.Form;
 
 /**
  * This class represents the information necessary to create a user.

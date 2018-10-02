@@ -10,7 +10,7 @@ public interface Form {
 	 * {@link ValidationException}
 	 * 
 	 * @throws AggregationException
-	 *             If a validation exception occures
+	 *             If a validation exception occurs
 	 */
 	void validate() throws AggregationException;
 

@@ -1,4 +1,4 @@
-package com.cruat.oauth.common.data.dao;
+package com.cruat.oauth.feature.users;
 
 import org.springframework.stereotype.Component;
 

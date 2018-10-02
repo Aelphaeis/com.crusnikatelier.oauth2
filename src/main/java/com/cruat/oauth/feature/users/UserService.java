@@ -1,11 +1,10 @@
-package com.cruat.oauth.services;
+package com.cruat.oauth.feature.users;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cruat.oauth.common.data.dao.UserDAO;
 import com.cruat.oauth.common.data.entities.User;
 import com.cruat.oauth.utilities.Users;
 
