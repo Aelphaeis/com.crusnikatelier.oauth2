@@ -3,11 +3,11 @@ package com.cruat.oauth.feature.users;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.cruat.oauth.common.data.entities.User;
 
-@Component
+@Service
 public class UserService {
 	
 	private UserDAO userDAO;
