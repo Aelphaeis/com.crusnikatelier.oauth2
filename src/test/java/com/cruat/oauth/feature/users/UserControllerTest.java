@@ -1,5 +1,6 @@
 package com.cruat.oauth.feature.users;
 
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
@@ -17,7 +18,10 @@ import org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder;
 @RunWith(MockitoJUnitRunner.class)
 public class UserControllerTest {
 	
+//	private static final Logger logger = LogManager.getLogger();
 	public static final String USER = "user@cruat.com";
+	public static final String PASS = "pswrd";
+	public static final String UUID = "739eae4f-33da-4760-8931-6a8a809c7e24";
 
 	@Mock
 	UserService userService;
@@ -28,9 +32,12 @@ public class UserControllerTest {
 	private MockHttpServletRequestBuilder requestBuilder;
 	private StandaloneMockMvcBuilder mvcBuilder;
 	
+
+	
 	@Test
 	public void createUser_user_registered() throws Exception {
 		//build raw mocks
+		when(userService.createUser(USER, PASS)).thenReturn(UUID);
 		
 		//build request
 		requestBuilder = MockMvcRequestBuilders.post("/users");
@@ -45,5 +52,4 @@ public class UserControllerTest {
 		ResultActions results = mvc.perform(requestBuilder);
 		results.andExpect(status().isOk());
 	}
-
 }
