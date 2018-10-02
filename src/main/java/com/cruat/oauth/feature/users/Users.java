@@ -1,9 +1,11 @@
-package com.cruat.oauth.utilities;
+package com.cruat.oauth.feature.users;
 
 import java.math.BigInteger;
 import java.util.UUID;
 
 import org.bouncycastle.crypto.generators.OpenBSDBCrypt;
+
+import com.cruat.oauth.utilities.Randomizer;
 
 public class Users {
 	

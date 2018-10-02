@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cruat.oauth.common.data.entities.User;
-import com.cruat.oauth.utilities.Users;
 
 @Component
 public class UserService {
