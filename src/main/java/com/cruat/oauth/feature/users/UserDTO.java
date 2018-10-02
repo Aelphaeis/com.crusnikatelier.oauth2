@@ -1,4 +1,4 @@
-package com.cruat.oauth.dto;
+package com.cruat.oauth.feature.users;
 
 import java.util.Date;
 

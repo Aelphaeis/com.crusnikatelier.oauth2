@@ -1,4 +1,4 @@
-package com.cruat.oauth.configuration;
+package com.cruat.oauth.common;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

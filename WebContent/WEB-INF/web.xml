@@ -31,10 +31,10 @@
 		<listener-class>liquibase.integration.servlet.LiquibaseServletListener</listener-class>
 	</listener>
 	<listener>
-		<listener-class>com.cruat.oauth.listener.HibernateListener</listener-class>
+		<listener-class>com.cruat.oauth.common.HibernateListener</listener-class>
 	</listener>
 	<listener>
-		<listener-class>com.cruat.oauth.listener.SpringListener</listener-class>
+		<listener-class>com.cruat.oauth.common.SpringListener</listener-class>
 	</listener>
 
 	<servlet>

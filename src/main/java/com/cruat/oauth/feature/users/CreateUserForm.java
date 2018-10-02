@@ -6,8 +6,8 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.cruat.oauth.exceptions.AggregationException;
-import com.cruat.oauth.rest.forms.Form;
+import com.cruat.oauth.common.AggregationException;
+import com.cruat.oauth.common.Form;
 
 /**
  * This class represents the information necessary to create a user.

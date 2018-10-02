@@ -1,6 +1,4 @@
-package com.cruat.oauth.rest.forms;
-
-import com.cruat.oauth.exceptions.AggregationException;
+package com.cruat.oauth.common;
 
 public interface Form {
 

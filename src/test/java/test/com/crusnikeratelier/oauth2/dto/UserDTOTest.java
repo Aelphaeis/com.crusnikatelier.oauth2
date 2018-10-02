@@ -9,7 +9,7 @@ import javax.xml.bind.JAXBException;
 
 import org.junit.Test;
 
-import com.cruat.oauth.dto.UserDTO;
+import com.cruat.oauth.feature.users.UserDTO;
 import com.cruat.oauth.utilities.MarshalUtils;
 
 public class UserDTOTest {

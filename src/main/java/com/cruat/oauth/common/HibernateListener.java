@@ -1,4 +1,4 @@
-package com.cruat.oauth.listener;
+package com.cruat.oauth.common;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
