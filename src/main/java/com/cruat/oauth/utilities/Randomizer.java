@@ -5,56 +5,64 @@ import java.nio.ByteOrder;
 import java.security.SecureRandom;
 
 public class Randomizer {
-	public final static String alphanumerics = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	public static final String DIGITS = "0123456789";
+	public static final String LOWERS = "abcdefghijklmnopqrstuvwxyz";
+	public static final String UPPERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	public static final String ALPHANUMS = UPPERS + LOWERS + DIGITS;
 	SecureRandom generator;
-	
-	public Randomizer(){
+
+	public Randomizer() {
 		generator = new SecureRandom();
 	}
-	
-	public byte getByte(){
-		return getBytes(1)[0];
-	}
-	
+
 	public byte[] getBytes(int size) {
-		byte[]bArr = new byte[size];
+		byte[] bArr = new byte[size];
 		generator.nextBytes(bArr);
 		return bArr;
 	}
-	
-	public short getShort(){
-		return ByteBuffer.wrap(getBytes(2)).order(ByteOrder.LITTLE_ENDIAN).getShort();
-	}
-	
-	public int getInt(){
+
+	public int getInt() {
 		return generator.nextInt();
 	}
-	
-	public long getLong(){
-		return ByteBuffer.wrap(getBytes(8)).order(ByteOrder.LITTLE_ENDIAN).getLong();
+
+	public String getAlphanumeric(int characterCount) {
+		return getRandomCharacterSubset(ALPHANUMS, characterCount);
 	}
-	
-	public float getFloat(){
-		return  ByteBuffer.wrap(getBytes(4)).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-	}
-	
-	public double getDouble(){
-		return ByteBuffer.wrap(getBytes(8)).order(ByteOrder.LITTLE_ENDIAN).getDouble();
-	}
-	
-	public char getChar(){
-		return ByteBuffer.wrap(getBytes(2)).order(ByteOrder.LITTLE_ENDIAN).getChar();
-	}
-	
-	public String getAlphanumeric(int characterCount){
-		return getRandomCharacterSubset(alphanumerics, characterCount);
-	}
-	
-	public String getRandomCharacterSubset(String original, int characterCount) {
-		String s = "";
-		for(int i = 0; i < characterCount; i++){
-			s += original.charAt(generator.nextInt(original.length()));
+
+	public String getRandomCharacterSubset(String original, int count) {
+		StringBuilder builder = new StringBuilder();
+		for (int i = 0; i < count; i++) {
+			int index = generator.nextInt(original.length());
+			builder.append(original.charAt(index));
 		}
-		return s;
+		return builder.toString();
+	}
+
+	public byte getByte() {
+		return getBytes(1)[0];
+	}
+
+	public short getShort() {
+		return wrapBytes(2).getShort();
+	}
+
+	public long getLong() {
+		return wrapBytes(8).getLong();
+	}
+
+	public float getFloat() {
+		return wrapBytes(4).getFloat();
+	}
+
+	public double getDouble() {
+		return wrapBytes(8).getDouble();
+	}
+
+	public char getChar() {
+		return wrapBytes(2).getChar();
+	}
+
+	private ByteBuffer wrapBytes(int size) {
+		return ByteBuffer.wrap(getBytes(size)).order(ByteOrder.LITTLE_ENDIAN);
 	}
 }

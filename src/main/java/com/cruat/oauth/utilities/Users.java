@@ -8,7 +8,7 @@ import org.bouncycastle.crypto.generators.OpenBSDBCrypt;
 public class Users {
 	
 	public static final int HASH_COST = 13;
-	public static final String SALT_CHARACTER_SET = Randomizer.alphanumerics + "./";
+	public static final String SALT_CHARACTER_SET = Randomizer.ALPHANUMS + "./";
 	
 	/**
 	 * Returns a randomly generated hex string 32 characters long

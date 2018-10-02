@@ -11,7 +11,7 @@ import com.cruat.oauth.utilities.Users;
 @Component
 public class UserService {
 	
-	UserDAO userDAO;
+	private UserDAO userDAO;
 	
 	@Autowired
 	public UserService(UserDAO userDAO) {
