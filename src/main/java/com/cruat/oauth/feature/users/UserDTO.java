@@ -24,6 +24,7 @@ public class UserDTO {
 		this();
 		setUsername(user.getEmail());
 		setJoined(user.getJoined());
+		setGuid(user.getGuid());
 	}
 	
 	@XmlElement(name="username")

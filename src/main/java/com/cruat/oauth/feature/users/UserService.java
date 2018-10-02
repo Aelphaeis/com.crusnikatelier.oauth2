@@ -24,7 +24,7 @@ public class UserService {
 	 * @param pass
 	 * @return GUID
 	 */
-	public String createUser(String email, String pass) {
+	public User createUser(String email, String pass) {
 
 		String salt = Users.generateUserSalt();
 		String guid = Users.generateUserGuid();
@@ -39,7 +39,7 @@ public class UserService {
 		
 		userDAO.create(user);
 		
-		return guid;
+		return user;
 	}
 
 }
