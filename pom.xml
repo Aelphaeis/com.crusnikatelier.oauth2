@@ -6,7 +6,6 @@
 	<artifactId>oauth2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
 	<name>OAuth Server</name>
 
 	<properties>
@@ -28,7 +27,16 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.0.3.RELEASE</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.7</version>
+		</dependency>
 		<!-- logging Libs -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -40,7 +48,6 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.9.0</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -48,7 +55,6 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -74,7 +80,6 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.11.Final</version>
 		</dependency>
-
 		<!-- For user passwords -->
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
@@ -89,15 +94,18 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.9.7</version>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.9.7</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>5.0.3.RELEASE</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>
