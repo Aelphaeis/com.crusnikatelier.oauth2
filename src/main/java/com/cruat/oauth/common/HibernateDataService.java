@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HibernateDataService implements Closeable {
 
-	private SessionFactory sessionFactory;
+	private final SessionFactory sessionFactory;
 
 	public HibernateDataService() {
 		// Build Service Registry
