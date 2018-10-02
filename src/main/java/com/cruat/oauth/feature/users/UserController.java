@@ -12,7 +12,7 @@ public class UserController {
 
 	HttpServletRequest request;
 
-	UserService userService;
+	private UserService userService;
 
 	@Autowired
 	public UserController(UserService uService) {
