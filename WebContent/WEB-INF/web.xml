@@ -30,10 +30,6 @@
 	<listener>
 		<listener-class>liquibase.integration.servlet.LiquibaseServletListener</listener-class>
 	</listener>
-	<listener>
-		<listener-class>com.cruat.oauth.common.SpringListener</listener-class>
-	</listener>
-
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
