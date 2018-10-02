@@ -4,20 +4,25 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
 import org.hibernate.Session;
-import org.hibernate.query.Query;
+
 
 public interface DataAccessObject<T extends DataEntity> {
 
 	default T find(long id) {
-		return getSession().get(getEntityClass(), id);
+		return getEntityManager().find(getEntityClass(), id);
 	}
 	
 	default Collection<T> find(Long... ids) {
 		return find(Arrays.asList(ids));
 	}
+	
 	default Collection<T> find(List<Long> ids) {
-		return getSession().byMultipleIds(getEntityClass()).multiLoad(ids);
+		Session session = getEntityManager().unwrap(Session.class);
+		return session.byMultipleIds(getEntityClass()).multiLoad(ids);
 	}
 
 	default T first(String query, Object... params) {
@@ -35,8 +40,8 @@ public interface DataAccessObject<T extends DataEntity> {
 	}
 
 	default List<T> query(String queryString, Object... params) {
-		Session sess = getSession();
-		Query<T> q = sess.createQuery(queryString, getEntityClass());
+		EntityManager sess = getEntityManager();
+		TypedQuery<T> q = sess.createQuery(queryString, getEntityClass());
 		for (int i = 0; i < params.length; i++) {
 			q.setParameter(i, params[i]);
 		}
@@ -44,26 +49,26 @@ public interface DataAccessObject<T extends DataEntity> {
 	}
 
 	default void createOrUpdate(T entity) {
-		getSession().saveOrUpdate(entity);
+		getEntityManager().unwrap(Session.class).saveOrUpdate(entity);
 	}
 
 	default void update(T entity) {
-		getSession().update(entity);
+		getEntityManager().unwrap(Session.class).update(entity);
 	}
 
 	default void create(T entity) {
-		getSession().save(entity);
+		getEntityManager().persist(entity);
 	}
 
 	default void delete(T entity) {
-		getSession().delete(entity);
+		getEntityManager().remove(entity);
 	}
 
 	default void delete(Iterable<T> entities) {
 		for (T entity : entities) {
-			getSession().delete(entity);
+			getEntityManager().remove(entity);
 		}
 	}
-	Session getSession();
+	EntityManager getEntityManager();
 	Class<T> getEntityClass();
 }

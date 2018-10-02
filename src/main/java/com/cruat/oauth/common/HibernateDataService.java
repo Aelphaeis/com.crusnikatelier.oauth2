@@ -3,6 +3,7 @@ package com.cruat.oauth.common;
 import java.io.Closeable;
 
 import javax.annotation.PreDestroy;
+import javax.persistence.EntityManagerFactory;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class HibernateDataService implements Closeable {
 
 	private final SessionFactory sessionFactory;
-
+	
 	public HibernateDataService() {
 		// Build Service Registry
 		StandardServiceRegistry registry = null;
@@ -31,7 +32,7 @@ public class HibernateDataService implements Closeable {
 	}
 
 	@Bean
-	public SessionFactory getSessionFactory() {
+	public EntityManagerFactory getSessionFactory() {
 		return sessionFactory;
 	}
 

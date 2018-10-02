@@ -1,7 +1,8 @@
 package com.cruat.oauth.feature.users;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
 import org.springframework.stereotype.Repository;
 
 import com.cruat.oauth.common.data.DataAccessObject;
@@ -10,15 +11,15 @@ import com.cruat.oauth.common.data.entities.User;
 @Repository
 public class UserDAO implements DataAccessObject<User> {
 	
-	private SessionFactory factory;
+	private final EntityManager manager;
 	
-	public UserDAO(SessionFactory factory) {
-		this.factory = factory;
+	public UserDAO(EntityManagerFactory factory) {
+		this.manager = factory.createEntityManager();
 	}
 
 	@Override
-	public Session getSession() {
-		return factory.getCurrentSession();
+	public EntityManager getEntityManager() {
+		return manager;
 	}
 
 	@Override
