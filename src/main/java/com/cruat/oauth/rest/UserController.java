@@ -32,6 +32,14 @@ public class UserController {
 	public @ResponseBody String test() {
 		return "test";
 	}
+	
+	@GetMapping("obj")	
+	public @ResponseBody CreateUserForm test2() {
+		CreateUserForm fm = new CreateUserForm();
+		fm.setEmail("a");;
+		fm.setPassword("e");
+		return fm;
+	}
 
 	protected UserService getUserService() {
 		return userService;

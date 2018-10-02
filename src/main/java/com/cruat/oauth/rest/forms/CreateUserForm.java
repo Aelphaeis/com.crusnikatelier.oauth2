@@ -17,8 +17,8 @@ import com.cruat.oauth.rest.UserController;
  */
 @XmlRootElement
 public class CreateUserForm implements Form {
-	String email;
-	String password;
+	private String email;
+	private String password;
 
 	@Override
 	public void validate() throws AggregationException {
