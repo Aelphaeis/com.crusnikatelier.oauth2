@@ -1,5 +1,6 @@
 package com.cruat.oauth.feature.users;
 
+import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 
 import com.cruat.oauth.common.data.DataAccessObject;
@@ -9,21 +10,14 @@ import com.cruat.oauth.common.data.entities.User;
 public class UserDAO implements DataAccessObject<User> {
 
 	@Override
-	public User create(User obj) {
+	public Session getSession() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User update(User obj) {
+	public Class<User> getEntityClass() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public void delete(User obj) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
