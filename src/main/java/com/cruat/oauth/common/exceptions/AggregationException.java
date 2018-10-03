@@ -1,4 +1,4 @@
-package com.cruat.oauth.common;
+package com.cruat.oauth.common.exceptions;
 
 import java.util.ArrayList;
 import java.util.Collection;
