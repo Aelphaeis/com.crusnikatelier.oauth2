@@ -4,25 +4,20 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-
 import org.hibernate.Session;
-
+import org.hibernate.query.Query;
 
 public interface DataAccessObject<T extends DataEntity> {
 
 	default T find(long id) {
-		return getEntityManager().find(getEntityClass(), id);
+		return getSession().get(getEntityClass(), id);
 	}
 	
 	default Collection<T> find(Long... ids) {
 		return find(Arrays.asList(ids));
 	}
-	
 	default Collection<T> find(List<Long> ids) {
-		Session session = getEntityManager().unwrap(Session.class);
-		return session.byMultipleIds(getEntityClass()).multiLoad(ids);
+		return getSession().byMultipleIds(getEntityClass()).multiLoad(ids);
 	}
 
 	default T first(String query, Object... params) {
@@ -40,8 +35,8 @@ public interface DataAccessObject<T extends DataEntity> {
 	}
 
 	default List<T> query(String queryString, Object... params) {
-		EntityManager sess = getEntityManager();
-		TypedQuery<T> q = sess.createQuery(queryString, getEntityClass());
+		Session sess = getSession();
+		Query<T> q = sess.createQuery(queryString, getEntityClass());
 		for (int i = 0; i < params.length; i++) {
 			q.setParameter(i, params[i]);
 		}
@@ -49,26 +44,26 @@ public interface DataAccessObject<T extends DataEntity> {
 	}
 
 	default void createOrUpdate(T entity) {
-		getEntityManager().unwrap(Session.class).saveOrUpdate(entity);
+		getSession().saveOrUpdate(entity);
 	}
 
 	default void update(T entity) {
-		getEntityManager().unwrap(Session.class).update(entity);
+		getSession().update(entity);
 	}
 
 	default void create(T entity) {
-		getEntityManager().persist(entity);
+		getSession().save(entity);
 	}
 
 	default void delete(T entity) {
-		getEntityManager().remove(entity);
+		getSession().delete(entity);
 	}
 
 	default void delete(Iterable<T> entities) {
 		for (T entity : entities) {
-			getEntityManager().remove(entity);
+			getSession().delete(entity);
 		}
 	}
-	EntityManager getEntityManager();
+	Session getSession();
 	Class<T> getEntityClass();
 }
