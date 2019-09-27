@@ -33,8 +33,6 @@ public class UserDTOTest {
 		dto.setJoined(now);
 		
 		marshalledString = MarshalUtils.marshal(dto);
-		dto = null;
-		
 		
 		dto = MarshalUtils.unmarshal(marshalledString, UserDTO.class);
 		assertEquals(username, dto.getUsername());
