@@ -1,6 +1,7 @@
 package com.cruat.oauth.feature.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,11 @@ public class UserController {
 		String pass = form.getPassword();
 		User user = userService.createUser(email, pass);
 		return new UserDTO(user);
+	}
+	
+	@GetMapping("ping")
+	public String ping() {
+		return "ping";
 	}
 	
 	protected UserService getUserService() {
