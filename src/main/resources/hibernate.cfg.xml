@@ -3,6 +3,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.datasource">java:comp/env/jdbc/datasource</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
 		<mapping class="com.cruat.oauth.common.data.entities.User"/>
 	</session-factory>
 </hibernate-configuration>
